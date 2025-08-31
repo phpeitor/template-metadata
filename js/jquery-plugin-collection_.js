@@ -750,29 +750,44 @@ tpj(document).ready(function() {
 	}
 }); 
 
-var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+var randomScalingFactor = function(){ return Math.round(Math.random()*100) };
+
+function lastMonths(count, locale = 'es-ES') {
+	const now = new Date();
+	const out = [];
+	for (let i = count - 1; i >= 0; i--) {
+		const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+		let m = d.toLocaleString(locale, { month: 'long' });  
+		m = m.charAt(0).toUpperCase() + m.slice(1);           
+		out.push(m);
+	}
+	return out;
+}
+
+function randArray(n){ return Array.from({length:n}, () => randomScalingFactor()); }
+
+var labels = lastMonths(7); 
 var barChartData = {
-	labels : ["January","February","March","April","May","June","July"],
-	datasets : [
+labels : labels,
+datasets : [
 	{
-		fillColor : "rgba(39, 69, 132,0.5)",
-		strokeColor : "rgba(39, 69, 132,0.8)",
-		highlightFill: "rgba(39, 69, 132,0.75)",
-		highlightStroke: "rgba(39, 69, 132,1)",
-		data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+	fillColor : "rgba(39, 69, 132,0.5)",
+	strokeColor : "rgba(39, 69, 132,0.8)",
+	highlightFill: "rgba(39, 69, 132,0.75)",
+	highlightStroke: "rgba(39, 69, 132,1)",
+	data : randArray(labels.length)
 	},
 	{
-		fillColor : "rgba(0,187,209,0.5)",
-		strokeColor : "rgba(0,187,209,0.8)",
-		highlightFill : "rgba(0,187,209,0.75)",
-		highlightStroke : "rgba(0,187,209,1)",
-		data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+	fillColor : "rgba(0,187,209,0.5)",
+	strokeColor : "rgba(0,187,209,0.8)",
+	highlightFill : "rgba(0,187,209,0.75)",
+	highlightStroke : "rgba(0,187,209,1)",
+	data : randArray(labels.length)
 	}
-	]
-}
+]
+};
+
 window.onload = function(){
-	var chart_barChart = document.getElementById("barChart").getContext("2d");
-	window.myBar = new Chart(chart_barChart).Bar(barChartData, {
-	responsive : true
-	});
+	var ctx = document.getElementById("barChart").getContext("2d");
+	window.myBar = new Chart(ctx).Bar(barChartData, { responsive: true });
 };
