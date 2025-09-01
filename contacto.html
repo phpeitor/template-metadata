@@ -22,7 +22,7 @@
 <script src="./js/jquery-2.2.4.min.js"></script>
 <script src="./js/jquery-ui.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
-<script src="./js/jquery-plugin-collection_.js"></script>
+<script src="./js/jquery-plugin-collection_.js?v=1"></script>
 <script src="./js/sweetalert2.js"></script>
 <link rel="stylesheet" href="./css/sweetalert2.css">
 </head>
@@ -44,6 +44,10 @@
               <ul class="list-inline xs-text-center text-white">
                 <li class="m-0 pl-5 pr-5" style="color: #fff;" data-animation-duration="20000"> 
                   <i class="fa fa-user text-theme-colored2 mr-5"></i>Representante <a href="https://www.caseware.com/" style="color: #fff;" target="_blank" class=""><b>Caseware Int. IDEA</b> </a> 
+                </li>
+                <li class="m-0 pl-5 pr-5"> <a href="#" style="color: #fff;" class=""><i class="fa fa-phone text-theme-colored2"></i> 965720221</a> </li>
+                <li class="m-0 pl-5 pr-5"> 
+                  <a href="#" style="color: #fff;" class=""><i class="fa fa-envelope-o text-theme-colored2 mr-5"></i> soporte@metadata.com.pe</a> 
                 </li>
               </ul>
             </div>
@@ -104,17 +108,17 @@
         <div class="container">
           <nav id="menuzord" class="menuzord default theme-colored menuzord-responsive">
             <ul class="menuzord-menu">
-              <li class=""><a href="./index.php">Inicio</a></li>
-			  <li><a href="#">Soluciones</a>
+              <li class=""><a href="./index.html">Inicio</a></li>
+			        <li><a href="#">Soluciones</a>
                 <ul class="dropdown">
-                  <li><a href="./index.php#solutions">CaseWare IDEA™ Data Analytics</a></li>
-                  <li><a href="./index.php#solutions">IDEA Server®</a></li>
-                  <li><a href="./index.php#solutions">SMARTANALYZER™</a></li>
+                  <li><a href="./index.html#solutions">CaseWare IDEA™ Data Analytics</a></li>
+                  <li><a href="./index.html#solutions">IDEA Server®</a></li>
+                  <li><a href="./index.html#solutions">SMARTANALYZER™</a></li>
                 </ul>
               </li>
-             <li class=""><a href="./index.php#training">Capacitaciones y Consultorias</a></li>
-             <li class=""><a href="./index.php#clients">Clientes</a></li>
-			 <li class="active"><a href="index.php">Contacto</a></li>
+             <li class=""><a href="./index.html#training">Capacitaciones y Consultorias</a></li>
+             <li class=""><a href="./index.html#clients">Clientes</a></li>
+            <li class="active"><a href="#">Contacto</a></li>
             </ul>
             <div class="pull-right sm-pull-none mb-sm-15">
               <a class="btn btn-colored btn-theme-colored mt-15 mt-sm-10 pt-10 pb-10" href="./images/works/brochure.pdf" target="_blank">Brochure</a>
@@ -126,7 +130,6 @@
   </header>
   
   <div class="main-content">
-    
     <section class="inner-header divider layer-overlay overlay-dark-4" data-bg-img="./images/bg/bg4.jpg">
       <div class="container pt-120 pb-60">
         <div class="section-content">
@@ -154,21 +157,20 @@
           </div>
           <div class="section-content">          
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-8 col-md-offset-2">
               
                 <form id="contact_form" name="contact_form" class="contact-form-transparent" >
                   <div class="row">
                     <div class="col-sm-6">
                       <div class="form-group">
-                      
-                        <input id="nombre" name="nombre" class="form-control" type="text" placeholder="Nombre Completo" required="">
+                          <input id="nombre" name="nombre" class="form-control" type="text" placeholder="Nombre Completo" required="">
                       </div>
                     </div>
-                      <div class="col-sm-6">
+                    <div class="col-sm-6">
                         <div class="form-group">
-                            <input id="apellido" name="apellido" class="form-control" type="text" placeholder="Apellidos" required="">
-                          </div>
+                           <input id="apellido" name="apellido" class="form-control" type="text" placeholder="Apellidos" required="">
                         </div>
+                      </div>
                     </div>
               
                   <div class="row">
@@ -183,6 +185,7 @@
                       </div>
                     </div>
                   </div>
+
                   <div class="row">
                     <div class="col-sm-6">
                       <div class="form-group">
@@ -203,49 +206,42 @@
                   </div>
                   
                   <div class="row">
-                    
-                          <div class="col-sm-6" >
-                              <div class="form-group" style="display: flex;">
-                                <input id="prefijo" name="prefijo" class="form-control required" type="text" placeholder="51" readonly />
-            
-                                <input id="telefono" name="telefono" class="form-control required" type="text" placeholder="Teléfono" />
-                                  </div>
-                          </div>
-                  
+                    <div class="col-sm-6" >
+                        <div class="form-group" style="display: flex;">
+                          <input id="prefijo" name="prefijo" class="form-control required" type="text" placeholder="51" readonly />
+                          <input id="telefono" name="telefono" class="form-control required" type="text" placeholder="Teléfono" />
+                            </div>
+                    </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <input id="email" name="email" class="form-control required email" type="email" placeholder="Email" />
                       </div>
                     </div>
-                    
                   </div>
                   
                   <div class="row">
-                  <div class="col-sm-6">
-                      <div class="form-group">
+                    <div class="col-sm-6">
+                        <div class="form-group">
                             <input type="checkbox" id="chk1" name="chk1" value="1"> ¿Ha trabajado con CaseWare IDEA antes?
-                      </div>
-                  </div>
-                  <div class="col-sm-6">
-                      <div class="form-group">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
                             <input type="checkbox" id="chk2" name="chk2" value="1"> ¿Está interesado en agendar una DEMO de la solución?
-                      </div>
+                        </div>
+                    </div>
                   </div>
-                  </div>
-                  
+
                   <div class="form-group">
-                    <textarea name="observacion" id="observacion" class="form-control" rows="5" placeholder="Mensaje"></textarea>
+                      <textarea name="observacion" id="observacion" class="form-control" rows="5" placeholder="Mensaje"></textarea>
                   </div>
                   <div class="form-group">
                     <button type="button" id="btn_registrar" name="btn_registrar" class="btn btn-dark btn-theme-colored btn-flat btn-block" data-loading-text="Please wait...">Enviar</button>
                   </div>
                 </form>
-                
-                
               </div>
             </div>
           </div>
-        
         </div>
       </section>
     
@@ -271,10 +267,9 @@
     <div class="container pt-70 pb-40">
       <div class="col-md-3">
         <div class="widget dark">
-          <img alt="" src="./images/logo-footer.png">
+          <img alt="" src="./images/logo.png">
           <p class="font-12 mt-20 mb-20" style="text-align:justify;">Generar relaciones de confianza con nuestros clientes, basadas en el compromiso de entregar resultados de excelencia en los campos donde tenemos fortalezas.</p>
           <a class="btn btn-default btn-sm btn-transparent mt-0" href="#">Leer Más</a>
-         
         </div>
       </div>
       
@@ -290,23 +285,21 @@
                 <a href="#">Capacitaciones</a>
                 <a href="#">Proyectos</a>
                 <a href="#">Gobierno</a>
-                <a href="https://metadata.com.pe/politicas-privacidad" id="">Políticas</a>
+                <a href="politica-privacidad.html">Políticas</a>
               </div>
             </div>
             
             <div class="widget dark">
-                 <p class="mt-20">Lima</p>
                   <ul class="list-inline">
                     <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-gray mr-5"></i> <a class="text-gray" href="#">+(51) 965720221</a> </li>
                     <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-gray mr-5"></i> <a class="text-gray" href="#">contacto@metadata.com.pe</a> </li>
-                    <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-gray mr-5"></i> <a class="text-gray" href="index.php">www.metadata.com.pe</a> </li>
+                    <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-gray mr-5"></i> <a class="text-gray" href="index.html">www.metadata.com.pe</a> </li>
                   </ul>            
                   <ul class="styled-icons icon-sm icon-dark icon-theme-colored2 icon-circled clearfix mt-10">
                     <li><a href="https://www.facebook.com/MetadataBusinessConsulting"  target="_blank"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                     <li><a href="https://www.linkedin.com/company/35560264"  target="_blank"><i class="fa fa-linkedin"></i></a></li>
                   </ul>
-              
             </div>
           </div>
          
@@ -335,16 +328,14 @@
       <div class="container pt-20 pb-20">
         <div class="row">
           <div class="col-md-8">
-            <p class="font-12 text-black-777 m-0">Copyright © 2018-<?php echo date('Y')?> is the web site editor accessible to everyon. Design & Development by: <a href="http://amvsolucionesti.com" target="_blank">AMV Soluciones</a></p>
+            <p class="font-12 text-black-777 m-0">Copyright © 2018-<span class="year_now"></span> is the web site editor accessible to everyon. Design & Development by: <a href="https://www.instagram.com/amvsoft.tech" target="_blank">amvsoft.tech</a></p>
           </div>
           <div class="col-md-4 text-right">
             <div class="widget no-border m-0">
               <ul class="list-inline sm-text-center mt-5 font-12">
-                <li>|</li>
                 <li>
                   <a href="#">Help Desk</a>
                 </li>
-                <li>|</li>
                 <li>
                   <a href="#">Support</a>
                 </li>
@@ -361,5 +352,6 @@
 <script src="./js/custom_new.js"></script>
 <script src="./js/select2.full.min.js"></script>
 <link rel="stylesheet" href="./js/select2.min.css">
+<script src="./js/pais.js"></script>
 </body>
 </html>

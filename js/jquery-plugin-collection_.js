@@ -649,107 +649,6 @@ return d},fgSegHtml:function(a,b){var c,d,e=this.view,f=a.event,g=e.isEventDragg
 
 !function(t){t.fn.twentytwenty=function(e){var e=t.extend({default_offset_pct:.5,orientation:"horizontal",before_label:"Before",after_label:"After",no_overlay:!1},e);return this.each(function(){var n=e.default_offset_pct,a=t(this),i=e.orientation,s="vertical"===i?"down":"left",r="vertical"===i?"up":"right";a.wrap("<div class='twentytwenty-wrapper twentytwenty-"+i+"'></div>"),e.no_overlay||a.append("<div class='twentytwenty-overlay'></div>");var d=a.find("img:first"),c=a.find("img:last");a.append("<div class='twentytwenty-handle'></div>");var l=a.find(".twentytwenty-handle");l.append("<span class='twentytwenty-"+s+"-arrow'></span>"),l.append("<span class='twentytwenty-"+r+"-arrow'></span>"),a.addClass("twentytwenty-container"),d.addClass("twentytwenty-before"),c.addClass("twentytwenty-after");var o=a.find(".twentytwenty-overlay");o.append("<div class='twentytwenty-before-label' data-content='"+e.before_label+"'></div>"),o.append("<div class='twentytwenty-after-label' data-content='"+e.after_label+"'></div>");var w=function(t){var e=d.width(),n=d.height();return{w:e+"px",h:n+"px",cw:t*e+"px",ch:t*n+"px"}},f=function(t){"vertical"===i?(d.css("clip","rect(0,"+t.w+","+t.ch+",0)"),c.css("clip","rect("+t.ch+","+t.w+","+t.h+",0)")):(d.css("clip","rect(0,"+t.cw+","+t.h+",0)"),c.css("clip","rect(0,"+t.w+","+t.h+","+t.cw+")")),a.css("height",t.h)},v=function(t){var e=w(t);l.css("vertical"===i?"top":"left","vertical"===i?e.ch:e.cw),f(e)};t(window).on("resize.twentytwenty",function(t){v(n)});var p=0,y=0,h=0,u=0;l.on("movestart",function(t){(t.distX>t.distY&&t.distX<-t.distY||t.distX<t.distY&&t.distX>-t.distY)&&"vertical"!==i?t.preventDefault():(t.distX<t.distY&&t.distX<-t.distY||t.distX>t.distY&&t.distX>-t.distY)&&"vertical"===i&&t.preventDefault(),a.addClass("active"),p=a.offset().left,y=a.offset().top,h=d.width(),u=d.height()}),l.on("moveend",function(t){a.removeClass("active")}),l.on("move",function(t){a.hasClass("active")&&((n="vertical"===i?(t.pageY-y)/u:(t.pageX-p)/h)<0&&(n=0),n>1&&(n=1),v(n))}),a.find("img").on("mousedown",function(t){t.preventDefault()}),t(window).trigger("resize.twentytwenty")})}}(jQuery);
 
-/*SLIDER*/
-var tpj=jQuery;
-var revapi34;
-tpj(document).ready(function() {
-	if(tpj("#rev_slider_home").revolution == undefined){
-		revslider_showDoubleJqueryError("#rev_slider_home");
-	}else{
-		revapi34 = tpj("#rev_slider_home").show().revolution({
-		sliderType:"standard",
-		jsFileLocation:"js/revolution-slider/js/",
-		sliderLayout:"fullwidth",
-		dottedOverlay:"none",
-		delay:5000,
-		navigation: {
-			keyboardNavigation:"on",
-			keyboard_direction: "horizontal",
-			mouseScrollNavigation:"off",
-			onHoverStop:"on",
-			touch:{
-			touchenabled:"on",
-			swipe_threshold: 75,
-			swipe_min_touches: 1,
-			swipe_direction: "horizontal",
-			drag_block_vertical: false
-			}
-			,
-			arrows: {
-			style:"zeus",
-			enable:true,
-			hide_onmobile:true,
-			hide_under:600,
-			hide_onleave:true,
-			hide_delay:200,
-			hide_delay_mobile:1200,
-			tmp:'<div class="tp-title-wrap">    <div class="tp-arr-imgholder"></div> </div>',
-			left: {
-				h_align:"left",
-				v_align:"center",
-				h_offset:30,
-				v_offset:0
-			},
-			right: {
-				h_align:"right",
-				v_align:"center",
-				h_offset:30,
-				v_offset:0
-			}
-			},
-			bullets: {
-			enable:true,
-			hide_onmobile:true,
-			hide_under:600,
-			style:"metis",
-			hide_onleave:true,
-			hide_delay:200,
-			hide_delay_mobile:1200,
-			direction:"horizontal",
-			h_align:"center",
-			v_align:"bottom",
-			h_offset:0,
-			v_offset:30,
-			space:5,
-			tmp:'<span class="tp-bullet-img-wrap"><span class="tp-bullet-image"></span></span>'
-			}
-		},
-		viewPort: {
-			enable:true,
-			outof:"pause",
-			visible_area:"80%"
-		},
-		responsiveLevels:[1240,1024,778,480],
-		gridwidth:[1240,1024,778,480],
-		gridheight:[600,550,500,450],
-		lazyType:"none",
-		parallax: {
-			type:"scroll",
-			origo:"enterpoint",
-			speed:400,
-			levels:[5,10,15,20,25,30,35,40,45,50],
-		},
-		shadow:0,
-		spinner:"off",
-		stopLoop:"off",
-		stopAfterLoops:-1,
-		stopAtSlide:-1,
-		shuffle:"off",
-		autoHeight:"off",
-		hideThumbsOnMobile:"off",
-		hideSliderAtLimit:0,
-		hideCaptionAtLimit:0,
-		hideAllCaptionAtLilmit:0,
-		debugMode:false,
-		fallbacks: {
-			simplifyAll:"off",
-			nextSlideOnWindowFocus:"off",
-			disableFocusListener:false,
-		}
-		});
-	}
-}); 
-
 var randomScalingFactor = function(){ return Math.round(Math.random()*100) };
 
 function lastMonths(count, locale = 'es-ES') {
@@ -768,30 +667,23 @@ function randArray(n){ return Array.from({length:n}, () => randomScalingFactor()
 
 var labels = lastMonths(7); 
 var barChartData = {
-labels : labels,
-datasets : [
-	{
-	fillColor : "rgba(39, 69, 132,0.5)",
-	strokeColor : "rgba(39, 69, 132,0.8)",
-	highlightFill: "rgba(39, 69, 132,0.75)",
-	highlightStroke: "rgba(39, 69, 132,1)",
-	data : randArray(labels.length)
-	},
-	{
-	fillColor : "rgba(0,187,209,0.5)",
-	strokeColor : "rgba(0,187,209,0.8)",
-	highlightFill : "rgba(0,187,209,0.75)",
-	highlightStroke : "rgba(0,187,209,1)",
-	data : randArray(labels.length)
-	}
-]
-};
-
-window.onload = function(){
-	var ctx = document.getElementById("barChart").getContext("2d");
-	window.myBar = new Chart(ctx).Bar(barChartData, { responsive: true });
-	const year = new Date().getFullYear();
-	document.querySelectorAll('.year_now').forEach(el => el.textContent = year);
+	labels : labels,
+	datasets : [
+		{
+		fillColor : "rgba(39, 69, 132,0.5)",
+		strokeColor : "rgba(39, 69, 132,0.8)",
+		highlightFill: "rgba(39, 69, 132,0.75)",
+		highlightStroke: "rgba(39, 69, 132,1)",
+		data : randArray(labels.length)
+		},
+		{
+		fillColor : "rgba(0,187,209,0.5)",
+		strokeColor : "rgba(0,187,209,0.8)",
+		highlightFill : "rgba(0,187,209,0.75)",
+		highlightStroke : "rgba(0,187,209,1)",
+		data : randArray(labels.length)
+		}
+	]
 };
 
 $('#mailchimp-subscription-form2').ajaxChimp({
@@ -809,4 +701,118 @@ function mailChimpCallBack(resp) {
 		$response = '<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + resp.msg + '</div>';
 	}
 	$mailchimpform.prepend($response);
+}
+
+/*SLIDER*/
+var path = (window.location.pathname || "").toLowerCase().replace(/\/+$/, "");
+var isIndex    = /(?:^|\/)(index\.html?)?$/.test(path);
+var isContacto = /(?:^|\/)contacto(?:\.html?)?$/.test(path);
+//console.log("isIndex", isIndex, "isContacto", isContacto);
+
+if(isIndex){
+	var tpj=jQuery;
+	var revapi34;
+	tpj(document).ready(function() {
+		if(tpj("#rev_slider_home").revolution == undefined){
+			revslider_showDoubleJqueryError("#rev_slider_home");
+		}else{
+			revapi34 = tpj("#rev_slider_home").show().revolution({
+			sliderType:"standard",
+			jsFileLocation:"js/revolution-slider/js/",
+			sliderLayout:"fullwidth",
+			dottedOverlay:"none",
+			delay:5000,
+			navigation: {
+				keyboardNavigation:"on",
+				keyboard_direction: "horizontal",
+				mouseScrollNavigation:"off",
+				onHoverStop:"on",
+				touch:{
+				touchenabled:"on",
+				swipe_threshold: 75,
+				swipe_min_touches: 1,
+				swipe_direction: "horizontal",
+				drag_block_vertical: false
+				}
+				,
+				arrows: {
+				style:"zeus",
+				enable:true,
+				hide_onmobile:true,
+				hide_under:600,
+				hide_onleave:true,
+				hide_delay:200,
+				hide_delay_mobile:1200,
+				tmp:'<div class="tp-title-wrap">    <div class="tp-arr-imgholder"></div> </div>',
+				left: {
+					h_align:"left",
+					v_align:"center",
+					h_offset:30,
+					v_offset:0
+				},
+				right: {
+					h_align:"right",
+					v_align:"center",
+					h_offset:30,
+					v_offset:0
+				}
+				},
+				bullets: {
+				enable:true,
+				hide_onmobile:true,
+				hide_under:600,
+				style:"metis",
+				hide_onleave:true,
+				hide_delay:200,
+				hide_delay_mobile:1200,
+				direction:"horizontal",
+				h_align:"center",
+				v_align:"bottom",
+				h_offset:0,
+				v_offset:30,
+				space:5,
+				tmp:'<span class="tp-bullet-img-wrap"><span class="tp-bullet-image"></span></span>'
+				}
+			},
+			viewPort: {
+				enable:true,
+				outof:"pause",
+				visible_area:"80%"
+			},
+			responsiveLevels:[1240,1024,778,480],
+			gridwidth:[1240,1024,778,480],
+			gridheight:[600,550,500,450],
+			lazyType:"none",
+			parallax: {
+				type:"scroll",
+				origo:"enterpoint",
+				speed:400,
+				levels:[5,10,15,20,25,30,35,40,45,50],
+			},
+			shadow:0,
+			spinner:"off",
+			stopLoop:"off",
+			stopAfterLoops:-1,
+			stopAtSlide:-1,
+			shuffle:"off",
+			autoHeight:"off",
+			hideThumbsOnMobile:"off",
+			hideSliderAtLimit:0,
+			hideCaptionAtLimit:0,
+			hideAllCaptionAtLilmit:0,
+			debugMode:false,
+			fallbacks: {
+				simplifyAll:"off",
+				nextSlideOnWindowFocus:"off",
+				disableFocusListener:false,
+			}
+			});
+		}
+	}); 
+
+	window.onload = function(){
+		var ctx = document.getElementById("barChart").getContext("2d");
+		window.myBar = new Chart(ctx).Bar(barChartData, { responsive: true });
+	};
+
 }
