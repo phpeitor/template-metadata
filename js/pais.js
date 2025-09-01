@@ -173,7 +173,7 @@ function registrar_contacto(nombres,apellidos,cargo,empresa,pais,ciudad,telefono
 	$.ajax({
 		data: {nombres:nombres,apellidos:apellidos,cargo:cargo,empresa:empresa,pais:pais,ciudad:ciudad,telefono:telefono,email:email,trabajo:trabajo,demo:demo,observacion:observacion},
 		dataType: 'json',
-		url: 'ajax_registrar_contacto.php',
+		url: 'success.json',
 		success:  function (response) {
 			console.log(response);
 			if (response.codigo==1){
@@ -197,7 +197,7 @@ function registrar_contacto(nombres,apellidos,cargo,empresa,pais,ciudad,telefono
 			}
 		}
 	});
-}  
+} 
 
 function initPais() {
   const $pais = $('#pais');

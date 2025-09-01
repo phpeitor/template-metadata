@@ -1,83 +1,4 @@
 @charset "utf-8";
-/*------------------------------------------------------------------
-[Master Stylesheet]
-
-Project:        Consulting Pro
-Version:        2.0
-Created Date:   10.05.2017
-Last change:    10.05.2017
-Primary use:    Consulting Finance Corporate Business - ConsultingPro
-Author:         ThemeMascot
-URL:            http://themeforest.net/user/ThemeMascot
--------------------------------------------------------------------*/
-/*
-This file contains the common styles of this theme.
-*/
-/*------------------------------------------------------------------
-[table of contents]
-
-* typography.less
-* common.less
-* extra.less
-* overlay.less
-* header.less
-* nav.less
-* topbar.less
-* inner-header-title.less
-* vertical-nav.less
-* menu-full-page.less
-* boxed-layout.less
-* form.less
-* side-push-panel.less
-* box-hover-effect.less
-* gallery-isotope.less
-* slider.less
-* home.less
-* about.less
-* causes.less
-* volunteer.less
-* contact.less
-* event.less
-* practice-area.less
-* services.less
-* job.less
-* shop.less
-* blog.less
-* shortcodes.less 
-	* alerts.less
-	* blockquote.less
-	* buttons.less
-	* clients.less
-	* countdown-Timer.less
-	* countdown.less
-	* dividers.less
-	* facebook-disqus-comments.less
-	* faqs.less
-	* flex-slider.less
-	* flip-box.less
-	* font-icons.less
-	* funfacts.less
-	* infinitescroll.less
-	* instagram.less
-	* lightbox.less
-	* map.less
-	* pegination.less
-	* pricing.less
-	* process-steps.less
-	* progress-bar.less
-	* promo.less
-	* section-title.less
-	* separators.less
-	* styled-icons.less
-	* tabs.less
-	* teams.less
-	* testimonials.less
-	* toggles-accordions.less
-	* vertical-timeline.less
-	* working-process.less
-* Footer
-* ===============================================
-*/
 @import "../css/font-awesome.min.css";
 @import "../css/font-awesome-animation.min.css";
 @import "../css/pe-icon-7-stroke.css";
@@ -1005,20 +926,13 @@ section > .container-fluid {
 .header-nav .header-nav-wrapper .menuzord {
   padding: 0;
 }
-/* Transparent Header */
-.header {
-  /* -------- Header floating ---------- */
-}
+
 .header.header-floating {
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   z-index: 1111;
-  /* -------- Header Transparent Dark ---------- */
-  /* -------- Header Transparent Dark ---------- */
-  /* -------- Header Transparent White ---------- */
-  /* -------- Header Transparent Dark ---------- */
 }
 .header.header-floating .header-top,
 .header.header-floating .header-mid {
@@ -9073,5 +8987,3 @@ body.has-fixed-footer .main-content {
     margin-bottom: 0 !important;
   }
 }
-
-/*# sourceMappingURL=style-main.css.map */
