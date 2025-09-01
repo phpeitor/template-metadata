@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <head>
-
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 <meta name="description" content="Metadata Business Consulting" />
@@ -29,15 +28,13 @@
 </head>
 <body class="">
 <div id="wrapper" class="clearfix">
-  <!-- preloader -->
   <div id="preloader">
     <div id="spinner">
-      <img alt="" src="./images/preloaders/5.gif">
+      <img alt="" src="./images/preloaders/loading.gif">
     </div>
     <div id="disable-preloader" class="btn btn-default btn-sm">Desactivar Preloader</div>
   </div>
   
-  <!-- Header -->
   <header id="header" class="header">
     <div class="header-top bg-theme-colored border-top-theme-colored2-2px sm-text-center">
       <div class="container">
@@ -45,8 +42,8 @@
           <div class="col-md-6">
             <div class="widget text-white">
               <ul class="list-inline xs-text-center text-white">
-                <li class="m-0 pl-10 pr-10" style="color: #fff;" data-animation-duration="20000"> 
-                  <i class="fa fa-user text-theme-colored2 mr-5"></i>Representante en Perú de <a href="https://www.caseware.com/" style="color: #fff;" target="_blank" class=""><b>Caseware Int. IDEA</b> </a> 
+                <li class="m-0 pl-5 pr-5" style="color: #fff;" data-animation-duration="20000"> 
+                  <i class="fa fa-user text-theme-colored2 mr-5"></i>Representante <a href="https://www.caseware.com/" style="color: #fff;" target="_blank" class=""><b>Caseware Int. IDEA</b> </a> 
                 </li>
               </ul>
             </div>
@@ -128,12 +125,10 @@
     </div>
   </header>
   
-  <!-- Start main-content -->
   <div class="main-content">
     
-     <section class="inner-header divider layer-overlay overlay-dark-4" data-bg-img="./images/bg/bg4.jpg">
+    <section class="inner-header divider layer-overlay overlay-dark-4" data-bg-img="./images/bg/bg4.jpg">
       <div class="container pt-120 pb-60">
-        <!-- Section Content -->
         <div class="section-content">
           <div class="row"> 
             <div class="col-md-6">
@@ -148,149 +143,130 @@
       </div>
     </section>
     
-       <section data-bg-img="./images/pattern/p4.png"> 
-      <div class="container">
-        <div class="section-title text-center">
-          <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-              <h2 class="text-uppercase font-28 mt-0"><span class="text-theme-colored">Formulario</span> Contacto</h2>
+    <section data-bg-img="./images/pattern/p4.png"> 
+        <div class="container">
+          <div class="section-title text-center">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2">
+                <h2 class="text-uppercase font-28 mt-0"><span class="text-theme-colored">Formulario</span> Contacto</h2>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="section-content">          
-          <div class="row">
-            <div class="col-md-12">
-            
-              <!-- Contact Form -->
-              <form id="contact_form" name="contact_form" class="contact-form-transparent" >
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                    
-                      <input id="nombre" name="nombre" class="form-control" type="text" placeholder="Nombre Completo" required="">
-                    </div>
-                  </div>
+          <div class="section-content">          
+            <div class="row">
+              <div class="col-md-12">
+              
+                <form id="contact_form" name="contact_form" class="contact-form-transparent" >
+                  <div class="row">
                     <div class="col-sm-6">
-                       <div class="form-group">
-                          <input id="apellido" name="apellido" class="form-control" type="text" placeholder="Apellidos" required="">
-                        </div>
+                      <div class="form-group">
+                      
+                        <input id="nombre" name="nombre" class="form-control" type="text" placeholder="Nombre Completo" required="">
                       </div>
-                  </div>
-            
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <input id="cargo" name="cargo" class="form-control required" type="text" placeholder="Cargo">
+                    </div>
+                      <div class="col-sm-6">
+                        <div class="form-group">
+                            <input id="apellido" name="apellido" class="form-control" type="text" placeholder="Apellidos" required="">
+                          </div>
+                        </div>
+                    </div>
+              
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <input id="cargo" name="cargo" class="form-control required" type="text" placeholder="Cargo">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <input id="empresa" name="empresa" class="form-control required" type="text" placeholder="Empresa">
+                      </div>
                     </div>
                   </div>
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <input id="empresa" name="empresa" class="form-control required" type="text" placeholder="Empresa">
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      	<select id="pais" name="pais" class="form-control select2" required="required">
-												<option value="">Seleccione Pais </option>
-												<?php 
-													require_once("./clsPais.php");
-													$objPais = new clsPais;
-													$arr_datos = $objPais->consulta_paises();
-													foreach($arr_datos as $datos)
-													echo '<option value="'.$datos['iso2'].'|'.$datos['phone_code'].'">'.$datos['nombre'].'</option>';
-												?> 
-											</select>
-										<label id="pais-error" class="error" for="pais">Este campo es requerido</label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                        <select id="ciudad" name="ciudad" class="form-control select2" required="required">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                          <select id="pais" name="pais" class="form-control select2" required="required">
+                          <option value="">Seleccione Pais </option>
+                          
                         </select>
-                        <label id="ciudad-error" class="error" for="pais">Este campo es requerido</label>
+                      <label id="pais-error" class="error" for="pais">Este campo es requerido</label>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                
-                <div class="row">
-                   
-                        <div class="col-sm-6" >
-                             <div class="form-group" style="display: flex;">
-                              <input id="prefijo" name="prefijo" class="form-control required" type="text" placeholder="51" readonly />
-           
-                              <input id="telefono" name="telefono" class="form-control required" type="text" placeholder="Teléfono" />
-                                </div>
-                         </div>
-                
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <input id="email" name="email" class="form-control required email" type="email" placeholder="Email" />
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                          <select id="ciudad" name="ciudad" class="form-control select2" required="required">
+                          </select>
+                          <label id="ciudad-error" class="error" for="pais">Este campo es requerido</label>
+                      </div>
                     </div>
                   </div>
                   
-                </div>
-                
-                <div class="row">
-                <div class="col-sm-6">
-                    <div class="form-group">
-                          <input type="checkbox" id="chk1" name="chk1" value="1"> ¿Ha trabajado con CaseWare IDEA antes?
+                  <div class="row">
+                    
+                          <div class="col-sm-6" >
+                              <div class="form-group" style="display: flex;">
+                                <input id="prefijo" name="prefijo" class="form-control required" type="text" placeholder="51" readonly />
+            
+                                <input id="telefono" name="telefono" class="form-control required" type="text" placeholder="Teléfono" />
+                                  </div>
+                          </div>
+                  
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <input id="email" name="email" class="form-control required email" type="email" placeholder="Email" />
+                      </div>
                     </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="form-group">
-                          <input type="checkbox" id="chk2" name="chk2" value="1"> ¿Está interesado en agendar una DEMO de la solución?
-                    </div>
-                </div>
-                </div>
+                    
+                  </div>
+                  
+                  <div class="row">
+                  <div class="col-sm-6">
+                      <div class="form-group">
+                            <input type="checkbox" id="chk1" name="chk1" value="1"> ¿Ha trabajado con CaseWare IDEA antes?
+                      </div>
+                  </div>
+                  <div class="col-sm-6">
+                      <div class="form-group">
+                            <input type="checkbox" id="chk2" name="chk2" value="1"> ¿Está interesado en agendar una DEMO de la solución?
+                      </div>
+                  </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <textarea name="observacion" id="observacion" class="form-control" rows="5" placeholder="Mensaje"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <button type="button" id="btn_registrar" name="btn_registrar" class="btn btn-dark btn-theme-colored btn-flat btn-block" data-loading-text="Please wait...">Enviar</button>
+                  </div>
+                </form>
                 
-                <div class="form-group">
-                  <textarea name="observacion" id="observacion" class="form-control" rows="5" placeholder="Mensaje"></textarea>
-                </div>
-                <div class="form-group">
-                  <button type="button" id="btn_registrar" name="btn_registrar" class="btn btn-dark btn-theme-colored btn-flat btn-block" data-loading-text="Please wait...">Enviar</button>
-                </div>
-              </form>
-              
-              
+                
+              </div>
             </div>
           </div>
+        
         </div>
-      
-      </div>
-    </section>
+      </section>
     
-    <!-- Divider: Google Map -->
-    <section>
-      <div class="container-fluid pt-0 pb-0">
-        <div class="row">
-
-          <div 
-            id="map-canvas-multipointer"
-            data-mapstyle="style1"
-            data-height="400"
-            data-zoom="12"
-            data-marker="images/map-marker.png">
+      <section>
+        <div class="container-fluid pt-0 pb-0">
+          <div class="row">
+            <div 
+              id="map-canvas-multipointer"
+              data-mapstyle="style1"
+              data-height="400"
+              data-zoom="12"
+              data-marker="images/map-marker.png">
+            </div>
+            <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+            <script src="./js/google-map.js"></script>
           </div>
-
-          <script src="https://maps.googleapis.com/maps/api/js?key="></script>
-          
-          <script src="./js/google-map.js"></script>
-       
-
-            
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </div>
-  <!-- end main-content -->
 
-
-    
-  </div>
-  <!-- end main-content -->
-  <!-- Footer -->
   <footer id="footer" class="footer" data-bg-color="#152029">
     <div class="container pt-70 pb-40">
       <div class="col-md-3">
@@ -348,13 +324,10 @@
                     </span>
                   </div>
                 </form>
-                
               </div>
             </div>
-          
           </div>
-          
-          
+        
         </div>
       </div>
     </div>
@@ -384,204 +357,9 @@
   </footer>
   <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
 </div>
-<!-- end wrapper -->
-
-<!-- Footer Scripts -->
-<!-- JS | Chart-->
 <script src="./js/chart.js"></script>
-<!-- JS | Custom script for all pages -->
 <script src="./js/custom_new.js"></script>
-
-<!--SELECT2-->
 <script src="./js/select2.full.min.js"></script>
 <link rel="stylesheet" href="./js/select2.min.css">
-<script type="text/javascript">
-$(function() {
-	
-	
-	$(".select2").select2();
-	
-	$('#ciudad-error').hide();
-	$('#pais-error').hide();
-	
-	$("#pais").change(function(e) {				
-		var pais = $(this).val();
-		var pais2=pais.split("|")[0];
-		//console.log(pais2);
-		cargar_ciudad(pais2);
-		$('#prefijo').val('Prefijo: '+pais.split("|")[1])
-	});
-	
-	/* $("#contact_form").validate({
-                  submitHandler: function(form) {
-                    var form_btn = $(form).find('button[type="submit"]');
-                    var form_result_div = '#form-result';
-                    $(form_result_div).remove();
-                    form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
-                    var form_btn_old_msg = form_btn.html();
-                    form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
-                    $(form).ajaxSubmit({
-                      dataType:  'json',
-                      success: function(data) {
-                        if( data.status == 'true' ) {
-                          $(form).find('.form-control').val('');
-                        }
-                        form_btn.prop('disabled', false).html(form_btn_old_msg);
-                        $(form_result_div).html(data.message).fadeIn('slow');
-                        setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
-                      }
-                    });
-                  }
-                });*/
-	
-	$("#btn_registrar").click(function(e) {	
-	     var error = false;
-	     var nombres = $.trim($('#nombre').val());
-        var apellidos = $.trim($('#apellido').val());
-        var cargo = $.trim($('#cargo').val());
-        var empresa = $.trim($('#empresa').val());
-        var pais = $.trim($('#pais').val());
-        var ciudad = $.trim($('#ciudad').val());
-        var telefono = $.trim($('#telefono').val());
-        var email = $.trim($('#email').val());
-        var trabajo = $("#chk1:checked").length;
-        var demo = $("#chk2:checked").length;
-        var observacion = $.trim($('#observacion').val());
-        var prefijo = $.trim($('#prefijo').val());
-        
-	    $('#nombre,#apellido,#cargo,#empresa,#pais,#ciudad','#telefono','#email','$observacion').click(function(){
-				$(this).removeClass("error");
-		});
-
-        if(nombres.length == 0  ){
-            var error = true;
-            $('#nombre').addClass("error");
-        }else{
-            $('#nombre').removeClass("error");
-        }
-        
-         if(apellidos.length == 0  ){
-            var error = true;
-            $('#apellido').addClass("error");
-        }else{
-            $('#apellido').removeClass("error");
-        }
-        
-        if(cargo.length == 0  ){
-            var error = true;
-            $('#cargo').addClass("error");
-        }else{
-            $('#cargo').removeClass("error");
-        }
-        
-        if(empresa.length == 0  ){
-            var error = true;
-            $('#empresa').addClass("error");
-        }else{
-            $('#empresa').removeClass("error");
-        }
-        
-         if(prefijo.length == 0  ){
-            var error = true;
-            $('#prefijo').addClass("error");
-        }else{
-            $('#prefijo').removeClass("error");
-        }
-        
-        if(pais.length == 0  ){
-            var error = true;
-            $('#pais').addClass("error");
-             $('#pais-error').show();
-        }else{
-            $('#pais').removeClass("error");
-             $('#pais-error').hide();
-        }
-        
-        if(ciudad.length == 0  ){
-            var error = true;
-            $('#ciudad').addClass("error");
-            $('#ciudad-error').show();
-        }else{
-            $('#ciudad').removeClass("error");
-            $('#ciudad-error').hide();
-        }
-        
-     
-        
-        if(telefono.length == 0 || telefono.length>9 ){
-                var error = true;
-                $('#telefono').addClass("error");
-            }else if(telefono.length == 0 || telefono.length<6 ){
-                var error = true;
-                $('#telefono').addClass("error");
-            }else{
-                $('#telefono').removeClass("error");
-            }
-        
-        if(email.length == 0 || email.indexOf('@') == '-1' ){
-            var error = true;
-            $('#email').addClass("error");
-        }else{
-            $('#email').removeClass("error");
-        }
-        
-           if(error == false){ 
-        registrar_contacto(nombres,apellidos,cargo,empresa,pais,ciudad,telefono,email,trabajo,demo,observacion);
-           }
-        
-    });
-    
-                
-});
-
-function cargar_ciudad(pais) {
-	$.ajax({
-		data: {pais:pais},
-		dataType: 'html',
-		url: '../cbb_ciudades.php',
-		success:  function (response) {
-			$("#ciudad").html(response);
-			$('#ciudad').val("");
-			$('#ciudad').change();
-			$('#ciudad-error').hide();
-        	$('#pais-error').hide();
-		}
-	});
-}
-
-
- function registrar_contacto(nombres,apellidos,cargo,empresa,pais,ciudad,telefono,email,trabajo,demo,observacion) {
-        $.ajax({
-            data: {nombres:nombres,apellidos:apellidos,cargo:cargo,empresa:empresa,pais:pais,ciudad:ciudad,telefono:telefono,email:email,trabajo:trabajo,demo:demo,observacion:observacion},
-            dataType: 'json',
-            url: '../ajax_registrar_contacto.php',
-            success:  function (response) {
-                console.log(response);
-                if (response.codigo==1){
-                  
-                    swal({
-                	     title: 'Metadata Business Consulting',
-                         html: "Gracias por tu mensaje. <br/> Te contactaremos lo más pronto posible",
-                		confirmButtonText: 'Ok',
-                		footer: '<a href="https://www.facebook.com/MetadataBusinessConsulting"  target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/company/35560264"  target="_blank"><i class="fa fa-linkedin"></i></a>',
-                	  backdrop: `
-                		rgba(0,0,123,0.4)
-                		center left
-                		no-repeat
-                  `
-                	}).then((result) => {
-                	  if (result.value) {
-                	    	window.location='../index.php'; 
-                	  }
-                	})
-
-                }else{
-                    swal({  title: "Mensaje del Sistema", text: response.mensaje, type: "error" });
-                }
-            }
-        });
-}
-
-</script>	
 </body>
 </html>

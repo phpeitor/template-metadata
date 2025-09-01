@@ -790,6 +790,8 @@ datasets : [
 window.onload = function(){
 	var ctx = document.getElementById("barChart").getContext("2d");
 	window.myBar = new Chart(ctx).Bar(barChartData, { responsive: true });
+	const year = new Date().getFullYear();
+	document.querySelectorAll('.year_now').forEach(el => el.textContent = year);
 };
 
 $('#mailchimp-subscription-form2').ajaxChimp({
