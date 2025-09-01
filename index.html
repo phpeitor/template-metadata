@@ -130,7 +130,7 @@
 			 <li class=""><a href="/contacto">Contacto</a></li>
             </ul>
             <div class="pull-right sm-pull-none mb-sm-15">
-              <a class="btn btn-colored btn-theme-colored mt-15 mt-sm-10 pt-10 pb-10" href="./images/works/brochure.pdf" target="_blank">Brochure</a>
+              <a class="btn btn-colored btn-theme-colored mt-15 mt-sm-10 pt-10 pb-10" href="./images/works/brochure.pdf" target="_blank">Brochure 📕</a>
             </div>
           </nav>
         </div>
@@ -932,99 +932,94 @@
         <div class="row">
             <div class="col-md-3">
              </div>
-             <div class="col-md-7">
-                 <h2 class="text-uppercase title">Formulario <span class="text-theme-colored2">Contacto</span></h2>
-              <div class="diamond-line-left-theme-colored2"></div>
-              <form id="contact_form" name="contact_form" class="contact-form-transparent" >
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                    
-                      <input id="nombre" name="nombre" class="form-control" type="text" placeholder="Nombre Completo" required="">
-                    </div>
-                  </div>
+             <div class="col-md-6">
+                <h2 class="text-uppercase title">Formulario <span class="text-theme-colored2">Contacto</span></h2>
+                <div class="diamond-line-left-theme-colored2"></div>
+                <form id="contact_form" name="contact_form" class="contact-form-transparent" >
+                  <div class="row">
                     <div class="col-sm-6">
-                       <div class="form-group">
-                          <input id="apellido" name="apellido" class="form-control" type="text" placeholder="Apellidos" required="">
-                        </div>
+                      <div class="form-group">
+                        <input id="nombre" name="nombre" class="form-control" type="text" placeholder="Nombre Completo" required="">
                       </div>
-                  </div>
-            
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <input id="cargo" name="cargo" class="form-control required" type="text" placeholder="Cargo">
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <input id="apellido" name="apellido" class="form-control" type="text" placeholder="Apellidos" required="">
+                      </div>
                     </div>
                   </div>
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <input id="empresa" name="empresa" class="form-control required" type="text" placeholder="Empresa">
+              
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <input id="cargo" name="cargo" class="form-control required" type="text" placeholder="Cargo">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <input id="empresa" name="empresa" class="form-control required" type="text" placeholder="Empresa">
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      	<select id="pais" name="pais" class="form-control select2" required="required">
-												<option value="">Seleccione Pais </option>
-											
-											</select>
-										<label id="pais-error" class="error" for="pais">Este campo es requerido</label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                        <select id="ciudad" name="ciudad" class="form-control select2" required="required">
+
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                          <select id="pais" name="pais" class="form-control select2" required="required">
+                          <option value="">Seleccione Pais </option>
                         </select>
-                        <label id="ciudad-error" class="error" for="pais">Este campo es requerido</label>
+                        <label id="pais-error" class="error" for="pais">Este campo es requerido</label>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                
-                <div class="row">
-                   
-                        <div class="col-sm-6" >
-                             <div class="form-group" style="display: flex;">
-                              <input id="prefijo" name="prefijo" class="form-control required" type="text" placeholder="51" readonly />
-           
-                              <input id="telefono" name="telefono" class="form-control required" type="text" placeholder="Teléfono" />
-                                </div>
-                         </div>
-                
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <input id="email" name="email" class="form-control required email" type="email" placeholder="Email" />
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                          <select id="ciudad" name="ciudad" class="form-control select2" required="required">
+                          </select>
+                          <label id="ciudad-error" class="error" for="pais">Este campo es requerido</label>
+                      </div>
                     </div>
                   </div>
                   
-                </div>
-                
-                <div class="row">
-                <div class="col-sm-6">
-                    <div class="form-group">
-                          <input type="checkbox" id="chk1" name="chk1" value="1"> ¿Ha trabajado con CaseWare IDEA antes?
+                  <div class="row">
+                    <div class="col-sm-6" >
+                        <div class="form-group" style="display: flex;">
+                          <input id="prefijo" name="prefijo" class="form-control required" type="text" placeholder="51" readonly />
+                          <input id="telefono" name="telefono" class="form-control required" type="text" placeholder="Teléfono" />
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="form-group">
-                          <input type="checkbox" id="chk2" name="chk2" value="1"> ¿Está interesado en agendar una DEMO de la solución?
+                  
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <input id="email" name="email" class="form-control required email" type="email" placeholder="Email" />
+                      </div>
                     </div>
-                </div>
-                </div>
-                
-                <div class="form-group">
-                  <textarea name="observacion" id="observacion" class="form-control required" rows="5" placeholder="Mensaje" required="required"></textarea>
-                  <label id="obs-error" class="error" for="obs">Déjanos un mensaje. ¿Tienes algún comentario o sugerencia para nosotros?</label>
-                </div>
-                <div class="form-group">
-                  <button type="button" id="btn_registrar" name="btn_registrar" class="btn btn-dark btn-theme-colored btn-flat btn-block" data-loading-text="Please wait...">Enviar</button>
-                </div>
-              </form>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input type="checkbox" id="chk1" name="chk1" value="1"> ¿Ha trabajado con CaseWare IDEA antes?
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input type="checkbox" id="chk2" name="chk2" value="1"> ¿Está interesado en agendar una DEMO de la solución?
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <textarea name="observacion" id="observacion" class="form-control required" rows="5" placeholder="Mensaje" required="required"></textarea>
+                    <label id="obs-error" class="error" for="obs">Déjanos un mensaje. ¿Tienes algún comentario o sugerencia para nosotros?</label>
+                  </div>
+                  <div class="form-group">
+                    <button type="button" id="btn_registrar" name="btn_registrar" class="btn btn-dark btn-theme-colored btn-flat btn-block" data-loading-text="Please wait...">Enviar</button>
+                  </div>
+                </form>
             </div>  
         </div>
       </div>
     </section>
-    
   </div>
 
   <footer id="footer" class="footer" data-bg-color="#152029">
@@ -1032,9 +1027,8 @@
       <div class="col-md-3">
         <div class="widget dark">
           <img alt="" src="./images/logo-footer.png">
-          <p class="font-12 mt-20 mb-20" style="text-align:justify;">Generar relaciones de confianza con nuestros clientes, basadas en el compromiso de entregar resultados de excelencia en los campos donde tenemos fortalezas.</p>
+          <p class="font-12 mt-20 mb-20">Generar relaciones de confianza con nuestros clientes, basadas en el compromiso de entregar resultados de excelencia en los campos donde tenemos fortalezas.</p>
           <a class="btn btn-default btn-sm btn-transparent mt-0" href="#">Leer Más</a>
-         
         </div>
       </div>
       
@@ -1050,28 +1044,27 @@
                 <a href="#">Capacitaciones</a>
                 <a href="#">Proyectos</a>
                 <a href="#">Gobierno</a>
-                <a href="https://metadata.com.pe/politicas-privacidad" id="">Políticas</a>
+                <a href="./politica-privacidad.html">Políticas</a>
               </div>
             </div>
             
             <div class="widget dark">
-                 <p class="mt-20">Lima</p>
-                  <ul class="list-inline">
-                    <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-gray mr-5"></i> <a class="text-gray" href="#">+(51) 965720221</a> </li>
-                    <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-gray mr-5"></i> <a class="text-gray" href="#">contacto@metadata.com.pe</a> </li>
-                    <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-gray mr-5"></i> <a class="text-gray" href="index.php">www.metadata.com.pe</a> </li>
-                  </ul>            
-                  <ul class="styled-icons icon-sm icon-dark icon-theme-colored2 icon-circled clearfix mt-10">
-                    <li><a href="https://www.facebook.com/MetadataBusinessConsulting"  target="_blank"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="https://www.linkedin.com/company/35560264"  target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                  </ul>
-              
+                <p class="mt-20">Lima</p>
+                <ul class="list-inline">
+                  <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-gray mr-5"></i> <a class="text-gray" href="#">+(51) 965720221</a> </li>
+                  <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-gray mr-5"></i> <a class="text-gray" href="#">contacto@metadata.com.pe</a> </li>
+                  <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-gray mr-5"></i> <a class="text-gray" href="index.php">www.metadata.com.pe</a> </li>
+                </ul>            
+                <ul class="styled-icons icon-sm icon-dark icon-theme-colored2 icon-circled clearfix mt-10">
+                  <li><a href="https://www.facebook.com/MetadataBusinessConsulting"  target="_blank"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="https://www.linkedin.com/company/35560264"  target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
             </div>
           </div>
          
           <div class="col-sm-6 col-md-6">
-              <div class="widget dark">
+            <div class="widget dark">
               <h4 class="widget-title">Subscríbete</h4>
               <div class="widget-subscribe">
                 <h5 class="subscribe-title text-gray">Para recibir las últimas noticias y actualizaciones, manténgase conectado con nosotros por correo</h5>
@@ -1084,35 +1077,14 @@
                     </span>
                   </div>
                 </form>
-                <!-- Mailchimp Subscription Form Validation-->
-                <script type="text/javascript">
-                  $('#mailchimp-subscription-form2').ajaxChimp({
-                      callback: mailChimpCallBack,
-                      url: '//thememascot.us9.list-manage.com/subscribe/post?u=a01f440178e35febc8cf4e51f&amp;id=49d6d30e1e'
-                  });
-
-                  function mailChimpCallBack(resp) {
-                      // Hide any previous response text
-                      var $mailchimpform = $('#mailchimp-subscription-form2'),
-                          $response = '';
-                      $mailchimpform.children(".alert").remove();
-                      if (resp.result === 'success') {
-                          $response = '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + resp.msg + '</div>';
-                      } else if (resp.result === 'error') {
-                          $response = '<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + resp.msg + '</div>';
-                      }
-                      $mailchimpform.prepend($response);
-                  }
-                </script>
               </div>
             </div>
-          
           </div>
-          
-          
+
         </div>
       </div>
     </div>
+
     <div class="footer-bottom" data-bg-color="#253039">
       <div class="container pt-20 pb-20">
         <div class="row">
@@ -1122,11 +1094,9 @@
           <div class="col-md-4 text-right">
             <div class="widget no-border m-0">
               <ul class="list-inline sm-text-center mt-5 font-12">
-                <li>|</li>
                 <li>
                   <a href="#">Help Desk</a>
                 </li>
-                <li>|</li>
                 <li>
                   <a href="#">Support</a>
                 </li>
