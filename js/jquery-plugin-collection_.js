@@ -814,5 +814,37 @@ if(isIndex){
 		var ctx = document.getElementById("barChart").getContext("2d");
 		window.myBar = new Chart(ctx).Bar(barChartData, { responsive: true });
 	};
+}
 
+if(isContacto){
+
+  function loadScript(src) {
+    return new Promise((resolve, reject) => {
+      const s = document.createElement('script');
+      s.src = src;
+      s.async = true;
+      s.defer = true;
+      s.onload = resolve;
+      s.onerror = () => reject(new Error('No se pudo cargar: ' + src));
+      document.head.appendChild(s);
+    });
+  }
+
+  (async () => {
+    try {
+      const res = await fetch('./config.json');
+      const cfg = await res.json();
+      if (!cfg.googleMapsApiKey) throw new Error('Falta googleMapsApiKey en config.json');
+      await loadScript('https://maps.googleapis.com/maps/api/js?key=' + encodeURIComponent(cfg.googleMapsApiKey));
+      await loadScript('./js/google-map.js');
+
+      if (typeof window.initMap === 'function') {
+        window.initMap();
+      }
+    } catch (err) {
+      console.error(err);
+      const el = document.getElementById('map-canvas-multipointer');
+      if (el) el.textContent = 'No se pudo cargar el mapa.';
+    }
+  })();
 }

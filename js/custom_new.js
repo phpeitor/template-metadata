@@ -18,6 +18,7 @@ var THEMEMASCOT = {};
     var portfolio_filter = ".portfolio-filter a";
     var $portfolio_filter_first_child = $(".portfolio-filter a:eq(0)");
     var $portfolio_flex_slider = $(".portfolio-slider");
+    
 
 
     THEMEMASCOT.isMobile = {

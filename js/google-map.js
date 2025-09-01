@@ -1,11 +1,9 @@
 function initialize() {
 
-    // Multiple Markers
     var markers = [
         ['Metadata Business Consulting', -12.0770035,-77.1071106]
     ];
                         
-    // Info Window Content
     var infoWindowContent = [
         ['<div class="info_content">' +
         '<h3>Metadata Business Consulting</h3>' +
@@ -14,14 +12,11 @@ function initialize() {
 
     // Multiple Pointers with Different Colors
     var mapPointers = [
-        ['../images/map-marker2.png']
+        ['./images/map-marker2.png']
     ];
-
-
 
     var map;
     var bounds = new google.maps.LatLngBounds();
-
     var current_item = jQuery("#map-canvas-multipointer");
     var map_address = current_item.data('address');
     var map_latlng = current_item.data('latlng');
@@ -44,14 +39,10 @@ function initialize() {
         mapTypeId: 'roadmap'
     };
                     
-    // Display a map on the page
     map = new google.maps.Map(current_item.get(0), mapOptions);
     map.setTilt(45);
-
-    // Display multiple markers on a map
     var infoWindow = new google.maps.InfoWindow(), marker, i;
     
-    // Loop through our array of markers & place each one on the map  
     for( i = 0; i < markers.length; i++ ) {
         var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
         bounds.extend(position);
@@ -62,29 +53,23 @@ function initialize() {
             icon: mapPointers[i][0]
         });
 
-        // Allow each marker to have an info window    
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
             return function() {
                 infoWindow.setContent(infoWindowContent[i][0]);
                 infoWindow.open(map, marker);
             }
         })(marker, i));
-
-        // Automatically center the map fitting all markers on the screen
         map.fitBounds(bounds);
     }
 
-    // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
     var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
         this.setZoom(map_zoom);
         google.maps.event.removeListener(boundsListener);
     });
-    
 }
 
 var THEMEMASCOT_googlemap_init_obj = {};
 var THEMEMASCOT_GEOCODE_ERROR = "Error";
-// Google map Styles
 var THEMEMASCOT_googlemap_styles = {
     'default': [],
     'style1':  [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#eeeeee"}]},{"featureType":"landscape.natural.landcover","elementType":"geometry.fill","stylers":[{"color":"#dddddd"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry.fill","stylers":[{"color":"#dddddd"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#00BBD1"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#979797"}]},{"featureType":"water","elementType":"labels.text.stroke","stylers":[{"weight":"0.01"}]}],
