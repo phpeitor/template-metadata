@@ -29,9 +29,6 @@ const SA_DATA = [
     cities: ["Cayena","Kourou","Saint-Laurent-du-Maroni"] }
 ];
 
-const year = new Date().getFullYear();
-document.querySelectorAll('.year_now').forEach(el => el.textContent = year);
-
 initPais(); 
 $(".select2").select2();
 $('#ciudad-error').hide();

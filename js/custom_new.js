@@ -3,9 +3,8 @@ var THEMEMASCOT = {};
 (function($) {
     "use strict";
 
-    /* ---------------------------------------------------------------------- */
-    /* -------------------------- Declare Variables ------------------------- */
-    /* ---------------------------------------------------------------------- */
+    const year = new Date().getFullYear();
+    document.querySelectorAll('.year_now').forEach(el => el.textContent = year);
     var $document = $(document);
     var $document_body = $(document.body);
     var $window = $(window);
