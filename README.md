@@ -7,6 +7,8 @@
   <img src="https://cdn.dribbble.com/userupload/9947953/file/original-0649917fabe02348474b09ed6c5551b6.jpg" alt="Instagram" width="400">
 </a>
 
+`Distribuidor de los productos IDEA Analytics, IDEA Server, IDEA Smart Analyzer`
+
 ## 🚀 Quick Start
 
 1. **Clonar este repositorio**
